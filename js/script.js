@@ -186,7 +186,7 @@ d3.csv('data/netflix.csv').then(data=>{
         // ..
         // Part 2 - change opacity of an arc
         // ..
-        donut_lable.text(d.data.key)
+        donut_lable.text(d.data.key).style('opacity', 1);
         // Part 3 - change opacity, stroke и stroke-width of circles based on rating
         nodes
             .style('opacity', function (buble_d) {
@@ -198,8 +198,8 @@ d3.csv('data/netflix.csv').then(data=>{
         // ..
     }
     function outOfArc(){
-        d3.select(this).style('opacity', 1)
-
+        d3.select(this).style('opacity', 1);
+        donut_lable.text("").style('opacity', 0);
         // Part 2 - change content of donut_lable
         // ..
         // Part 2 - change opacity of an arc
